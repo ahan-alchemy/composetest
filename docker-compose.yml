@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  web:
+    build: .
+    ports:
+      - "8000:5000"
+    entrypoint:
+      - flask
+      - run
+      - --port=5010
+  redis:
+    image: "redis:alpine"
